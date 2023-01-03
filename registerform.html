@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+    <head>
+
+        <title>CHESS</title>
+
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="icon" type="image/png" href="favicon_logo.png">
+
+        <!-- custom css file link  -->
+        <link rel="stylesheet" href="registerfrom.css">
+
+        <!-- custom css particles file link  -->
+        <link rel="stylesheet" href="particles.css">
+
+    </head>
+    <body>
+        <div id="particles-js">
+            <div class="form-box">
+                <div class="button-box">
+                    <div id="button"></div>
+                        <button type="button" class="toggle-button" onclick="login()">Log In</button>
+                        <button type="button" class="toggle-button" onclick="register()">Register</button>
+                    </div>
+                    <div class="social-icons">
+                        <a href=""><img src="facebook.png"></a>
+                        <a href=""><img src="instagram.png" href=></a>
+                    </div>
+                    <form id="login" class="input-group">
+                        <input type="text" class="input-field" placeholder="User Id" required>
+                        <input type="text" class="input-field" placeholder="Enter Password" required>
+                        <input type="checkbox" class="check-box"><span>Remember Password</span>
+                        <button type="submit" class="submit-button">Log In</button>
+                    </form>
+                    <form id="register" class="input-group">
+                        <input type="text" class="input-field" placeholder="User Id" required>
+                        <input type="email" class="input-field" placeholder="Email Id" required>
+                        <input type="text" class="input-field" placeholder="Enter Password" required>
+                        <input type="checkbox" class="check-box"><span>I agree to the terms & consitions</span>
+                        <button type="submit" class="submit-button">Register</button>
+                    </form>
+                </div>
+                <script>
+                    var x = document.getElementById("login");
+                    var y = document.getElementById("register");
+                    var z = document.getElementById("button");
+            
+                    function register(){
+                        x.style.left="-400px"
+                        y.style.left="50px"
+                        z.style.left="110px"
+                    }
+                    
+                    function login(){
+                        x.style.left="50px"
+                        y.style.left="450px"
+                        z.style.left="0"
+                    }
+                </script>
+            </div>
+        <script src="particle.js"></script>
+        </div>
+    </body>
+</html> 
+
+<!-- <div class="box">  	
+    <input type="checkbox" id="chk" aria-hidden="true">
+        <div class="signup">
+            <form>
+                <label for="chk" aria-hidden="true">Sign up</label>
+                <input type="text" name="txt" placeholder="Name" required="">
+                <input type="text" name="txt" placeholder="UserName" required="">
+                <input type="email" name="email" placeholder="Email" required="">
+                <input type="password" name="pswd" placeholder="Password" required="">
+                <button>Sign up</button>
+            </form>
+        </div>
+        <div class="login">
+            <form>
+                <label for="chk" aria-hidden="true">Login</label>
+                <input type="email" name="email" placeholder="Email" required="">
+                <input type="password" name="pswd" placeholder="Password" required="">
+                <button>Login</button>
+            </form>
+        </div>
+</div> -->

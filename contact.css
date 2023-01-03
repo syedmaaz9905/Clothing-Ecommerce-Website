@@ -1,0 +1,364 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* ************************************************************************************ */
+/* Navbar */
+
+nav{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 20px 8%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo{
+    width: 80px;
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 40px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    position: relative;
+}
+
+/* Another Design */
+/* nav ul li a:before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 0;
+    height: 3px;
+    background-color: #000000;
+    transition: all 0.5s linear;
+}
+
+nav ul li a:hover:before{
+    width: 100%;
+    background-color: #00fec2;
+} */
+
+
+nav ul li a::after{
+	content: "";
+	width: 0;
+	height: 3px;
+	position: absolute;
+	bottom: -4px;
+	left: 50%;
+	transform: translateX(-50%);
+	background: #fff;
+	transition: width 0.3s;
+}
+
+nav ul li a:hover::after{
+	width: 75%;
+	background: #00fec2;
+}
+
+nav ul li a:hover{
+	color: #00fec2;
+}
+
+nav ul li a i{
+    display: none;
+}
+
+.nav-close-btn, .nav-menu-btn{
+    display: none;
+}
+
+/* ************************************************************************************ */
+
+.contact{
+    position: relative;
+    min-height: 100vh;
+    padding: 50px 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact .content{
+    max-width: 800px;
+    text-align: center;
+}
+
+.contact .content h2{
+    font-size: 50px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.contact .content p{
+    font-size: 20px;
+    font-weight: 400;
+    color: #fff;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.container .contactInfo{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+}
+
+.container .contactInfo .box{
+    position: relative;
+    padding: 20px 0;
+    display: flex;
+}
+
+.container .contactInfo .box .icon{
+    min-width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 22px;
+}
+
+.container .contactInfo .box .text{
+    display: flex;
+    margin-left: 20px;
+    font-size: 16px;
+    color: #fff;
+    flex-direction: column;
+    font-weight: 300;
+}
+
+.container .contactInfo .box .text h3{
+    font-weight: 500;
+    color: #00bcd4;
+}
+
+.contactForm{
+    width: 40%;
+    padding: 40px;
+    background: #fff;
+    border-radius: 25px;
+}
+
+.contactForm h2{
+    font-size: 30px;
+    color: #333;
+    font-weight: 500;
+}
+
+.contactForm .inputBox{
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.contactForm .inputBox input, .contactForm .inputBox textarea{
+    width: 100%;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    border: none;
+    border-bottom: 2px solid #333;
+    outline: none;
+    resize: none;
+}
+
+.contactForm .inputBox span{
+    position: absolute;
+    left: 0;
+    padding: 5px 0;
+    font-size: 16px;
+    margin: 10px 0;
+    pointer-events: none;
+    transition: 0.5s;
+    color: #666;
+}
+
+.contactForm .inputBox input:focus ~ span, .contactForm .inputBox input:valid ~ span,
+.contactForm .inputBox textarea:focus ~ span, .contactForm .inputBox textarea:valid ~ span{
+    color: #00bcd4;
+    font-size: 12px;
+    transform: translateY(-20px);
+}
+
+.contactForm .inputBox input[type="submit"]{
+    width: 100px;
+    background: #00bcd4;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.contactForm .inputBox input[type="submit"]:hover{
+    box-shadow: 0 1px 5px 0 #15f4ee inset, 0 1px 5px 0 #15f4ee, 0 1px 5px 0 #15f4ee inset, 0 1px 5px 0 #15f4ee;
+    text-shadow: 0 0 5px #15f4ee, 0 0 5px #15f4ee;
+}
+
+@media (max-width: 991px){
+
+    .contact{
+        padding: 50px;
+    }
+
+    .container{
+        flex-direction: column;
+    }
+
+    .container .contactInfo{
+        margin-bottom: 40px;
+    }
+
+    .container .contactInfo, .contactForm{
+        width: 100%;
+    }
+    
+}
+
+/* Background Vide To Cover Entire Page */
+
+.bg-video{
+    object-fit: cover;
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+@media (min-aspect-ratio: 16/9){
+    .bg-video{
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9){
+    .bg-video{
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width: 850px){
+
+    nav .logo {
+        width: 70px;
+    }
+
+    .content h1 {
+        font-size: 80px;
+        margin-bottom: 25px;
+    }
+
+    .content a {
+        font-size: 10px;
+    }
+
+    .nav-menu-btn{
+        display: block;
+        color: #fff;
+        font-size: 1.5em;
+        cursor: pointer;
+    }
+
+    .navigation{
+        z-index: 99999;
+        position: fixed;
+        background-color: rgba(0, 0, 0, 0.5);
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: hidden;
+        opacity: 0;
+        transition: 0.3s ease;
+    }
+
+    .navigation.active{
+        visibility: visible;
+        opacity: 1; 
+    }
+
+    .navigation .nav-items{
+        position: relative;
+        background: #fff;
+        width: 400px;
+        max-width: 400px;
+        display: grid;
+        place-content: center;
+        padding: 13px;
+        border-radius: 20px;
+        box-shadow: 0 5px 25px rgba(0, 0, 0, 0.8);
+    }
+
+    nav ul li {
+        list-style: none;
+        display: inline-block;
+        margin-left: 40px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .navigation .nav-items a{
+        color: #222;
+        font-size: 1em;
+        margin: 15px 50px;
+    }
+
+    .navigation .nav-items a i{
+        display: inline-block;
+        font-size: 1.2em;
+        margin-right: 5px;
+    }
+
+    .nav-close-btn{
+        display: block;
+        color: #222;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 1.3em;
+        margin: 10px;
+        cursor: pointer;
+    }
+
+}
+
+@media screen and (max-width: 991px){
+    .contact .content {
+        margin-top: 100px;
+    }
+}
